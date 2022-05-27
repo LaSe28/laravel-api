@@ -2,6 +2,7 @@
 @section('title', $title)
 @section('content')
 <div class="container pt-5">
+    <a class="btn btn-primary mb-5" href="{{route('admin.posts.index')}}">Torna ai post</a>
     <div class="row justify-content-center">
         <h2 class="card-title">{{$post->title}}</h2>
         <div class="card-text my-3">{{$post->content}}</div>

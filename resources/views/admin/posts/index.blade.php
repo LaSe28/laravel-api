@@ -2,7 +2,12 @@
 @section('title', 'Posts')
 @section('content')
 <div class="container ">
-    <a class="btn btn-primary" href="{{ route('admin.home') }}">Home</a>
+<main class="py-4">
+        <a class="btn btn-primary" href="{{ route('admin.home') }}">Home</a>
+        <a class="btn btn-secondary" href="{{route('admin.posts.index')}}">Tutti i post</a>
+        <a class="btn btn-secondary" href="{{route('admin.posts.myindex')}}">I miei post</a>
+
+    </main>
     <div class="row ">
         <div class="col-2 mt-5 pt-5">
             {{-- @dd($tags) --}}
