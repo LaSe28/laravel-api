@@ -1,20 +1,20 @@
 <template>
 <div>
-    <header-main></header-main>
-    <card></card>
+    <header-main />
+    <post-container/>
 </div>
 </template>
 
 <script>
 
-import HeaderMain from '../components/HeaderMainMain.vue';
-import Card from '../components/Card.vue';
+import HeaderMain from '../components/HeaderMain.vue';
+import PostContainer from '../components/PostContainer.vue';
 
 export default {
     name: 'App',
     components: {
         HeaderMain,
-        Card
+        PostContainer
     }
 }
 </script>

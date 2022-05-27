@@ -22,10 +22,10 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand " href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
-            <a class="dropdown-item" href="{{ route('logout') }}"
+            <a class="btn me-auto" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
@@ -80,9 +80,11 @@
             <a class="btn btn-primary" href="{{route('admin.posts.index')}}">Tutti i post</a>
             <a class="btn btn-primary" href="{{route('admin.posts.myindex')}}">I miei post</a>
         </div>
-        <div id="app">
+        <div class="container">
+            <div id="app">
 
 
+            </div>
         </div>
         @yield('content')
     </main>

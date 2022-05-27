@@ -41127,7 +41127,7 @@ var btnDelete = document.querySelectorAll('.btn-delete');
 var title = document.querySelector('#title');
 var currentUrl = window.location.href;
 
-if (currentUrl.includes('/posts?') && popup) {
+if (currentUrl.includes('/posts') && popup) {
   var form = document.querySelector('#form-delete');
   btnDelete.forEach(function (button) {
     button.addEventListener('click', function () {

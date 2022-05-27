@@ -1,17 +1,20 @@
 <template>
 <div>
-    header
+    <h1>
+    Ecco i Post scritti dagli utenti
+    </h1>
 </div>
 </template>
 
 <script>
 
     export default {
-        name: 'Header'
+        name: 'HeaderMain',
+
     }
-</script>
 
 </script>
+
 
 <style>
 
