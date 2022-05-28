@@ -6,7 +6,7 @@
                 <div class="d-flex flex-column card-body">
                     <h5 class="card-title">{{post.title}}</h5>
                     <p class="card-text">{{post.content}}</p>
-                    <a :href="'/posts/' + post.slug" class="btn btn-primary mt-auto">Go somewhere</a>
+                    <a :href="'/posts/' + post.slug" class="btn btn-primary mt-auto">Apri</a>
                 </div>
             </div>
         </div>

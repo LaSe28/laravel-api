@@ -42149,7 +42149,7 @@ var render = function () {
                   staticClass: "btn btn-primary mt-auto",
                   attrs: { href: "/posts/" + post.slug },
                 },
-                [_vm._v("Go somewhere")]
+                [_vm._v("Apri")]
               ),
             ]),
           ]),
