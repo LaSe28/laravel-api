@@ -11,8 +11,9 @@
             </div>
         </div>
     </div>
-    <div>
-        <a class="btn" >Next</a>
+    <div class="btn-container">
+        <a class="btn btn-primary" :class="prevPage === null ? 'disabled':''" @click="getUrl(prevPage)" >Prev</a>
+        <a class="btn btn-primary" :class="nextPage === null ? 'disabled':''" @click="getUrl(nextPage)" >Next</a>
     </div>
 
 </div>
@@ -28,17 +29,31 @@ export default {
             prevPage : null
         }
     },
-    created(){
-        Axios.get('http://localhost:8000/api/posts')
-        .then(res => {
-            this.posts = res.data.response.data
-            this.nextPage = res.data.response.next_page_url
-        })
-    }
+    methods: {
+        getUrl(url){
+            if(url){
+                }
+                Axios.get(url)
+                .then(res => {
+                    this.posts = res.data.response.data;
+                    this.nextPage = res.data.response.next_page_url;
+                    this.prevPage = res.data.response.prev_page_url;
+            })
 
+        }
+    },
+    created(){
+        this.getUrl('http://localhost:8000/api/posts')
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    .btn-container{
+        display: flex;
+        justify-content: center;
+        a{
+            margin: 1rem;
+        }
+    }
 </style>
